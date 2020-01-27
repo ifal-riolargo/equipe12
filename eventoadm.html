@@ -57,6 +57,7 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
             background-color: #6fb6f0;
+            margin: 0;
         }
 
         /* Style da cabeça */
@@ -189,7 +190,11 @@
 
         <nav class="menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Home</a>
+                    <ul>
+                        <li><a href="Artigo.html">Artigos</a></li>
+                    </ul>
+                </li>
                 <li><a href="curso.html">Cursos</a>
                     <ul>
                         <li><a href="cursoadm.html">Cadastrar Curso</a></li>
@@ -206,10 +211,11 @@
                         <li><a href="anuncioadm.html">Cadastrar Anúncio</a></li>
                     </ul>
                 </li>
-                <form action="http://www.seu-dominio.com.br" method="post">
-                    <input type=image src="img/RSS.png" width="35" height="35">
-                </form>
+                <div action="http://www.seu-dominio.com.br" method="post">
+                    <input type=image src="img/RSS.png" width="35" height="35" alt="Feed RSS">
+                </div>
             </ul>
+
 
             <div id="img">
 
@@ -221,8 +227,8 @@
 
         <article>
 
-            <a href="formulariocurso.html"></a>
-            <input type=image src="img/add.png" width="45" height="45">
+            <a href="formularioevento.html">
+            <input type=image src="img/add.png" width="45" height="45"></a>
          <div id="imag"><img src="img/logo.png" width="350" height="300"></div>
 
         <p>Neste ano, em parceria com o RioInfo 2020, será realizado a décima quarta edição do evento. O 15º SegInfo acontecerá das 9:00 às 13:00 horas do dia 16 de setembro de 2020 (quarta-feira), no Centro de Convenções Sulamerica, na Av. Paulo de Frontin, 1 – Cidade Nova, Rio de Janeiro. Com palestras de profissionais renomados e esse ano com um enfoque mais técnico, embora, orientado ao negócio das corporações e objetivando atender às necessidades e preocupações dos executivos e líderes da área de Segurança da Informação.
