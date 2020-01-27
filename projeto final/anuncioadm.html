@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <title>Mevc</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+        }
+
+        .menu {
+            widows: 70%;
+            height: 50px;
+            background-color: #6fb6f0;
+            font-family: Arial;
+
+        }
+
+        .menu ul {
+            list-style: none;
+            position: relative;
+        }
+
+        .menu ul li {
+            width: 150px;
+            float: left;
+        }
+
+        .menu a {
+            padding: 15px;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            background-color: #6fb6f0;
+            color: white;
+        }
+
+        .menu ul ul {
+            position: absolute;
+            visibility: hidden;
+        }
+
+        .menu ul li:hover ul {
+            visibility: visible;
+        }
+
+        .menu a:hover {
+            background-color: rgb(44, 68, 138);
+            color: white;
+        }
+
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #6fb6f0;
+            margin: 0;
+        }
+
+        /* Style da cabeça */
+
+        header {
+            padding: 35px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+            background-image: linear-gradient(rgb(44, 68, 138), #6fb6f0);
+        }
+
+        /* Recipiente para caixas flexíveis */
+
+        section {
+            display: -webkit-flex;
+            display: flex;
+        }
+
+        /* Style da navegação do menu */
+
+        nav {
+            -webkit-flex: 3;
+            -ms-flex: 3;
+            flex: 3;
+            background: #6fb6f0;
+            padding: 15px;
+        }
+
+        /* Style da lista dentro do menu */
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        /* Style do corpo */
+
+        article {
+            -webkit-flex: 3;
+            -ms-flex: 3;
+            flex: 3;
+            background-color: #6fb6f0;
+
+
+        }
+
+        /* Style do rodapé */
+
+        footer {
+            background-image: linear-gradient(#6fb6f0, rgb(44, 68, 138));
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        /* Layout responsivo - faz com que o menu e o conteúdo (dentro da seção) fiquem em cima um do outro em vez de um ao lado do outro */
+
+        @media (max-width: 600px) {
+            section {
+                -webkit-flex-direction: column;
+                flex-direction: column;
+            }
+        }
+
+        h3 {
+            color: white;
+        }
+
+        h2 {
+            color: rgb(32, 42, 90);
+            font-size: 25px;
+            text-align: center;
+        }
+
+        #img {
+            margin: 100px;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .flex-container>div {
+            text-align: center;
+            line-height: 75p;
+            margin: 8px;
+        }
+
+        .pesquisa {
+            width: 400px;
+            height: 30px;
+            margin: 30px auto;
+        }
+
+        #texto {
+            width: 250px;
+            height: 30px;
+            float: left;
+            font-family: 'arial';
+            font-size: 20px;
+        }
+
+        .btn {
+            width: 45px;
+            height: 30px;
+            background-color: rgb(32, 42, 90);
+            cursor: pointer;
+            padding: 5px 10px;
+        }
+        button {
+            margin: 3px;
+            color: white;
+            background-color: rgb(32, 42, 90);
+            font-size: 20px;
+        }
+        .enviar{
+            text-align: center;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="img/head.png" width="500" height="150">
+    </header>
+    <section>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Home</a>
+                    <ul>
+                        <li><a href="Artigo.html">Artigos</a></li>
+                    </ul>
+                </li>
+                <li><a href="curso.html">Cursos</a>
+                    <ul>
+                        <li><a href="cursoadm.html">Cadastrar Curso</a></li>
+                    </ul>
+
+                </li>
+                <li><a href="evento.html">Eventos</a>
+                    <ul>
+                        <li><a href="eventoadm.html">Cadastrar Evento</a></li>
+                    </ul>
+                </li>
+                <li><a href="anuncio.html">Anúncios</a>
+                    <ul>
+                        <li><a href="anuncioadm.html">Cadastrar Anúncio</a></li>
+                    </ul>
+                </li>
+                <div action="http://www.seu-dominio.com.br" method="post">
+                    <input type=image src="img/RSS.png" width="35" height="35" alt="Feed RSS">
+                </div>
+            </ul>
+
+
+            <div id="img">
+
+                <div id="img"><img src="img/Struuts.png" width="300" height="400"></div>
+            </div>
+            </select>
+
+        </nav>
+
+        <article>
+            <form class="pesquisa">
+                <input type="search" id="texto">
+                <img src="img/lupa.png" class="btn">
+            </form>
+
+            <a href="formularioanuncio.html">
+                <input type=image src="img/add.png" width="45" height="45"></a>
+
+            <div class="flex-container">
+                <div>
+                    <a href="https://www.indeed.com.br/empregos-de-Struts-em-S%C3%A3o-Paulo,-SP">50 vagas
+                            desenvolvedor Struts</a>
+                    <img src="img/vagas.jpg" width="175" height="175"><br><button>Editar
+                    </button><button>remover</button>
+                </div>
+                <div>
+                    <a href="https://www.manager.com.br/empregos-java-struts">100 vagas desenvolvedor Struts</a>
+                    
+                    <img src="img/vagas.jpg" width="175" height="175"><br><button>Editar
+                    </button><button>remover</button>
+                </div>
+                <div>
+                    <a href="https://www.jobatus.com.br/emprego-analista-sistemas-java-struts">540 vagas de analista de sistemas Struts</a>
+                    <img src="img/vagas.jpg" width="175" height="175"><br><button>Editar
+                    </button><button>remover</button>
+                </div>
+            </div>
+            <div class="flex-container">
+                <div>
+                    <a href="https://www.jobbydoo.com.br/vagas-consultor-java-struts-em-vit%C3%B3ria">Vagas de
+                            consultor java Struts</a></li>
+                    <img src="img/vagas.jpg" width="175" height="175"><br><button>Editar
+                    </button><button>remover</button>
+                </div>
+                <div>
+                    <a href="https://www.jobbydoo.com.br/vagas-consultor-java-struts-em-vit%C3%B3ria">13 vagas programador junior - SP</a>
+                    <img src="img/vagas.jpg" width="175" height="175"><br><button>Editar
+                    </button><button>remover</button>
+                </div>
+                <div>
+                    <a href="https://www.jobbydoo.com.br/vagas-consultor-java-struts-em-vit%C3%B3ria">17 vagas programador Senio - RJ</a>
+                    <img src="img/vagas.jpg" width="175" height="175"><br><button>Editar
+                    </button><button>remover</button>
+                </div>
+            </div>
+            <div class="enviar"> 
+                <input type=image src="img/enviar.png" width="200" height="60"></a>
+             </div>
+        </article>
+    </section>
+
+    <footer>
+
+        <h4>Contato</h4>
+        <p>Mevc-cursos@contato.com</p>
+        <div class="col-6">
+            Brasil, AL, Maceió
+            <p class="m-0 text-center text-white">Copyright &copy; 2020</p>
+    </footer>
+
+</body>
+
+</html>

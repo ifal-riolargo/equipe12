@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <title>Mevc</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+        }
+
+        .menu {
+            widows: 70%;
+            height: 50px;
+            background-color: #6fb6f0;
+            font-family: Arial;
+
+        }
+
+        .menu ul {
+            list-style: none;
+            position: relative;
+        }
+
+        .menu ul li {
+            width: 150px;
+            float: left;
+        }
+
+        .menu a {
+            padding: 15px;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            background-color: #6fb6f0;
+            color: white;
+        }
+
+        .menu ul ul {
+            position: absolute;
+            visibility: hidden;
+        }
+
+        .menu ul li:hover ul {
+            visibility: visible;
+        }
+
+        .menu a:hover {
+            background-color: rgb(44, 68, 138);
+            color: white;
+        }
+
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #6fb6f0;
+            margin: 0;
+        }
+
+        /* Style da cabeça */
+
+        header {
+            padding: 35px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+            background-image: linear-gradient(rgb(44, 68, 138), #6fb6f0);
+        }
+
+        /* Recipiente para caixas flexíveis */
+
+        section {
+            display: -webkit-flex;
+            display: flex;
+        }
+
+        /* Style da navegação do menu */
+
+        nav {
+            -webkit-flex: 3;
+            -ms-flex: 3;
+            flex: 3;
+            background: #6fb6f0;
+            padding: 15px;
+        }
+
+        /* Style da lista dentro do menu */
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        /* Style do corpo */
+
+        article {
+            -webkit-flex: 3;
+            -ms-flex: 3;
+            flex: 3;
+            background-color: #6fb6f0;
+
+
+        }
+
+        /* Style do rodapé */
+
+        footer {
+            background-image: linear-gradient(#6fb6f0, rgb(44, 68, 138));
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        /* Layout responsivo - faz com que o menu e o conteúdo (dentro da seção) fiquem em cima um do outro em vez de um ao lado do outro */
+
+        @media (max-width: 600px) {
+            section {
+                -webkit-flex-direction: column;
+                flex-direction: column;
+            }
+        }
+
+        h3 {
+            color: white;
+        }
+
+        h2 {
+            color: rgb(32, 42, 90);
+            font-size: 25px;
+            text-align: center;
+        }
+
+        #img {
+            margin: 100px;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .flex-container>div {
+            text-align: center;
+            line-height: 75p;
+            margin: 8px;
+        }
+
+        .pesquisa {
+            width: 400px;
+            height: 30px;
+            margin: 30px auto;
+        }
+
+        #texto {
+            width: 250px;
+            height: 30px;
+            float: left;
+            font-family: 'arial';
+            font-size: 20px;
+        }
+
+        .btn {
+            width: 45px;
+            height: 30px;
+            background-color: rgb(32, 42, 90);
+            cursor: pointer;
+            padding: 5px 10px;
+            }
+        #imag{
+            text-align: center;
+        }
+        button {
+            margin: 3px;
+            color: white;
+            background-color: rgb(32, 42, 90);
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="img/head.png" width="500" height="150">
+    </header>
+    <section>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Home</a>
+                    <ul>
+                        <li><a href="Artigo.html">Artigos</a></li>
+                    </ul>
+                </li>
+                <li><a href="curso.html">Cursos</a>
+                    <ul>
+                        <li><a href="cursoadm.html">Cadastrar Curso</a></li>
+                    </ul>
+
+                </li>
+                <li><a href="evento.html">Eventos</a>
+                    <ul>
+                        <li><a href="eventoadm.html">Cadastrar Evento</a></li>
+                    </ul>
+                </li>
+                <li><a href="anuncio.html">Anúncios</a>
+                    <ul>
+                        <li><a href="anuncioadm.html">Cadastrar Anúncio</a></li>
+                    </ul>
+                </li>
+                <div action="http://www.seu-dominio.com.br" method="post">
+                    <input type=image src="img/RSS.png" width="35" height="35" alt="Feed RSS">
+                </div>
+            </ul>
+
+
+            <div id="img">
+
+                <div id="img"><img src="img/Struuts.png" width="300" height="400"></div>
+            </div>
+            </select>
+
+        </nav>
+
+        <article>
+
+            <a href="formularioevento.html">
+            <input type=image src="img/add.png" width="45" height="45"></a>
+         <div id="imag"><img src="img/logo.png" width="350" height="300"></div>
+
+        <p>Neste ano, em parceria com o RioInfo 2020, será realizado a décima quarta edição do evento. O 15º SegInfo acontecerá das 9:00 às 13:00 horas do dia 16 de setembro de 2020 (quarta-feira), no Centro de Convenções Sulamerica, na Av. Paulo de Frontin, 1 – Cidade Nova, Rio de Janeiro. Com palestras de profissionais renomados e esse ano com um enfoque mais técnico, embora, orientado ao negócio das corporações e objetivando atender às necessidades e preocupações dos executivos e líderes da área de Segurança da Informação.
+
+            Para participar do 15º SegInfo é necessário se inscrever no RioInfo 2019. <a href="inscreva.html">Inscreva-se aqui!</a><br><br>
+            
+            <b>Grade SegInfo – 16 de setembro de 2019 – 09:00 às 13:00</b></p>
+
+            <ul>
+                <li>09:00-09:15:<b>Boas-vindas e principais pontos da 15ª edição do Workshop SegInfo</b></li>
+                <li>09:15-10:00:<b>Avaliação de Segurança da Informação com foco em LGPD (Lei Geral de Proteção de Dados Pessoais) |</b>  Davidson Boccardo</li>
+                <li>10:00-11:00:<b> Gerenciando Ameaças com CIS Controls v7.1 |</b>Rafael Soares Ferreira</li>
+                <li>11:00-12:00:<b>Account Takeover – Fraud Detection & Prevention |</b>  Victor Santos</li>
+                <li>12:00-13:00:<b> Debate e Mesa-Redonda: “LGPD, uma visão técnica, com foco em resultado para o negócio”</b></li>
+            </ul>
+            <button>Editar</button> <button>remover</button>
+            </div>
+        </article>
+    </section>
+
+    <footer>
+
+        <h4>Contato</h4>
+        <p>Mevc-cursos@contato.com</p>
+        <div class="col-6">
+            Brasil, AL, Maceió
+            <p class="m-0 text-center text-white">Copyright &copy; 2020</p>
+    </footer>
+
+</body>
+
+</html>

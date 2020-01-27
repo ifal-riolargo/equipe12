@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <title>Mevc</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+        }
+
+        .menu {
+            widows: 70;
+            height: 50px;
+            background-color: #6fb6f0;
+            font-family: Arial;
+
+        }
+
+        .menu ul {
+            list-style: none;
+            position: relative;
+        }
+
+        .menu ul li {
+            width: 150px;
+            float: left;
+        }
+
+        .menu a {
+            padding: 15px;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            background-color: #6fb6f0;
+            color: rgb(44, 68, 138)
+        }
+
+        .menu ul ul {
+            position: absolute;
+            visibility: hidden;
+        }
+
+        .menu ul li:hover ul {
+            visibility: visible;
+        }
+
+        .menu a:hover {
+            background-color: rgb(32, 42, 90);
+            color: white;
+        }
+
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #6fb6f0;
+            margin: 0;
+        }
+
+        /* Style da cabeça */
+        header {
+            padding: 35px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+            background-image: linear-gradient(rgb(44, 68, 138), #6fb6f0);
+        }
+
+        /* Recipiente para caixas flexíveis */
+        section {
+            display: -webkit-flex;
+            display: flex;
+        }
+
+        /* Style da navegação do menu */
+        nav {
+            -webkit-flex: 3;
+            -ms-flex: 3;
+            flex: 3;
+            background: #6fb6f0;
+            padding: 5px;
+        }
+
+        /* Style da lista dentro do menu */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        /* Style do corpo */
+        article {
+            -webkit-flex: 3;
+            -ms-flex: 3;
+            flex: 3;
+            background-color: #6fb6f0;
+
+        }
+
+        /* Style do rodapé */
+        footer {
+            background-image: linear-gradient(#6fb6f0, rgb(44, 68, 138));
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        /* Layout responsivo - faz com que o menu e o conteúdo (dentro da seção) fiquem em cima um do outro em vez de um ao lado do outro */
+        @media (max-width: 600px) {
+            section {
+                -webkit-flex-direction: column;
+                flex-direction: column;
+            }
+        }
+
+        h2 {
+            color: rgb(32, 42, 90);
+            font-size: 25px;
+            text-align: center;
+        }
+
+        .p {
+            color: rgb(32, 42, 90);
+            justify-content: center;
+            text-align: justify;
+            font-size: 17px;
+            padding: 15px;
+        }
+
+        #pp {
+            text-align: center;
+        }
+
+        #img {
+            margin: 100px;
+        }
+
+        #artigo {
+            margin: 10px;
+        }
+
+        #artigo {
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        #box-1 {     
+            width: 45%;
+            height: 45%;
+            margin: 18px;
+            
+            
+        }
+        #box-2 {
+            width: 45%;
+            height: 45%;
+            margin: 18px;
+
+        }
+        h1{
+            text-align: center;
+            color:rgb(32, 42, 90);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="img/head.png" alt="logo" width="500" height="150">
+    </header>
+
+    <section>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Home</a>
+                    <ul>
+                        <li><a href="Artigo.html">Artigos</a></li>
+                    </ul>
+                </li>
+                <li><a href="curso.html">Cursos</a>
+                    <ul>
+                        <li><a href="cursoadm.html">Cadastrar Curso</a></li>
+                    </ul>
+
+                </li>
+                <li><a href="evento.html">Eventos</a>
+                    <ul>
+                        <li><a href="eventoadm.html">Cadastrar Evento</a></li>
+                    </ul>
+                </li>
+                <li><a href="anuncio.html">Anúncios</a>
+                    <ul>
+                        <li><a href="anuncioadm.html">Cadastrar Anúncio</a></li>
+                    </ul>
+                </li>
+                <div action="http://www.seu-dominio.com.br" method="post">
+                    <input type=image src="img/RSS.png" width="35" height="35" alt="Feed RSS">
+                </div>
+            </ul>
+
+            <br><br><br>
+            <h1>Notícias/Artigos do dia</h1>
+            <div id="artigo">
+                <div id="box-1">
+                  <a href="https://mevc-cursos.webnode.com/" > <img src="img/artigo.jpg" width="288" height="200" alt="Artigo - Struts na prática de ponta a ponta">
+                    Boa parte do framework Struts foi desenvolvido entre maio de 2000 e junho de 2001, quando sua primeira versão foi lançada...
+                  </a> 
+            </div>
+
+                <div id="box-2">
+                  <a href="struts.html" ><img src="img/tudo.jpg" width="288" height="200" alt="Artigo - tudo sobre Struts & Struts II">
+                    Tudo sobre Struts & Struts II...</a>
+                </div>
+            </div>
+    
+        </nav>
+
+
+        <article>
+
+            <br>
+
+            <h2>Quem somos?</h2>
+
+            <div class="p">
+                <p>A MEVC CURSOS está no ramo a mais de 5 anos. E consiste em uma empresa de cursos de aperfeiçoamento
+                    profissional a distância, on-line, voltado para a formação continua de professores e profissionais
+                    de
+                    programação. Valendo-se da internet como meio de comunicação entre professores e alunos, os cursos
+                    são
+                    realizados integralmente à distância.</p>
+                <p>Os cursos possuem cargas horárias que variam entre 20 e 60 horas, e o aluno recebe seu certificado
+                    através dos correios em sua casa. Para a oferta dos cursos, a empresa possui uma loja virtual, onde
+                    o
+                    visitante escolhe o curso que deseja, e realiza o pagamento através de cartões de crédito ou boleto
+                    bancário. Após a confirmação do pagamento, o aluno recebe via e-mail um comunicado contendo sua
+                    senha e
+                    login para acessar o curso escolhido. Após concluir todas as atividades e alcançar 60% de
+                    aproveitamento, recebe o certificado de conclusão. Além disso, o curso oferece aos professores jogos
+                    e
+                    recursos didáticos para tornar suas aulas mais atrativas.</p>
+            </div>
+
+            <h2>Sobre o Curso</h2>
+            <div class="p">
+                <p>Neste curso de Apache Struts estudaremos sua tecnologia. A abrangência do curso engloba desde a
+                    configuração mais básica das ferramentas e bibliotecas utilizadas até o uso prático em uma aplicação
+                    exemplo, construída interativamente com as aulas. Dentro deste escopo são estudados os fluxos das
+                    transações e as sintaxe de uso da tecnologia, primando pelos detalhes e segredos da mesma. O curso
+                    habilita o aluno a desenvolver aplicações Struts , bem como gerenciar as ferramentas utilizadas</p>
+            </div>
+
+            <div id="pp">
+                <p>Algumas empresas que usam Struts são: Banco Central, Telefonicas, Bradesco e etc...</p>
+            </div>
+        </article>
+    </section>
+
+    <footer>
+
+        <h4>Contato</h4>
+        <p>Mevc-cursos@contato.com</p>
+        <p>Brasil, AL, Maceió</p>
+        <p class="m-0 text-center text-white">Copyright &copy; 2020</p>
+    </footer>
+
+</body>
+
+</html>

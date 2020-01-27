@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <title>Mevc</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+        }
+
+        .menu {
+            widows: 70%;
+            height: 50px;
+            background-color: #6fb6f0;
+            font-family: Arial;
+
+        }
+
+        .menu ul {
+            list-style: none;
+            position: relative;
+        }
+
+        .menu ul li {
+            width: 150px;
+            float: left;
+        }
+
+        .menu a {
+            padding: 15px;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            background-color: #6fb6f0;
+            color: white;
+        }
+
+        .menu ul ul {
+            position: absolute;
+            visibility: hidden;
+        }
+
+        .menu ul li:hover ul {
+            visibility: visible;
+        }
+
+        .menu a:hover {
+            background-color: rgb(44, 68, 138);
+            color: white;
+        }
+
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #6fb6f0;
+            margin: 0;
+        }
+
+        /* Style da cabeça */
+
+        header {
+            padding: 35px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+            background-image: linear-gradient(rgb(44, 68, 138), #6fb6f0);
+        }
+
+        /* Recipiente para caixas flexíveis */
+
+        section {
+            display: -webkit-flex;
+            display: flex;
+        }
+
+        /* Style da navegação do menu */
+
+        nav {
+            -webkit-flex: 3;
+            -ms-flex: 3;
+            flex: 3;
+            background: #6fb6f0;
+            padding: 15px;
+        }
+
+        /* Style da lista dentro do menu */
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        /* Style do corpo */
+
+        article {
+            -webkit-flex: 3;
+            -ms-flex: 3;
+            flex: 3;
+            background-color: #6fb6f0;
+
+
+        }
+
+        /* Style do rodapé */
+
+        footer {
+            background-image: linear-gradient(#6fb6f0, rgb(44, 68, 138));
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        /* Layout responsivo - faz com que o menu e o conteúdo (dentro da seção) fiquem em cima um do outro em vez de um ao lado do outro */
+
+        @media (max-width: 600px) {
+            section {
+                -webkit-flex-direction: column;
+                flex-direction: column;
+            }
+        }
+
+        h3 {
+            color: white;
+        }
+
+        h2 {
+            color: rgb(32, 42, 90);
+            font-size: 40px;
+            text-align: center;
+            font-family: fantasy;
+        }
+
+        #img {
+            margin: 100px;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .flex-container>div {
+            text-align: center;
+            line-height: 75p;
+            margin: 8px;
+        }
+
+        #form {
+            text-align: center;
+            font-size: 20px;
+            font-family: fantasy;
+            color: rgb(32, 42, 90);
+        }
+
+        #texto {
+            width: 250px;
+            height: 30px;
+        }
+
+        #text {
+            width: 250px;
+            height: 200px;
+        }
+
+        button {
+            margin: 3px;
+            color: white;
+            background-color: rgb(32, 42, 90);
+            font-size: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: rgb(32, 42, 90);
+            font-size: 30px;
+            text-align: center;
+            font-family: fantasy;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+        }
+
+        .contato {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .field {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px;
+        }
+
+        textarea {
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="img/head.png" width="500" height="150">
+    </header>
+    <section>
+
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="curso.html">Cursos</a>
+                    <ul>
+                        <li>
+                            <a href="cursoadm.html">Cadastrar Curso</a>
+                        </li>
+                    </ul>
+
+                </li>
+                <li>
+                    <a href="evento.html">Eventos</a>
+                    <ul>
+                        <li>
+                            <a href="eventoadm.html">Cadastrar Evento</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="anuncio.html">Anúncios</a>
+                    <ul>
+                        <li>
+                            <a href="anuncioadm.html">Cadastrar Anúncio</a>
+                        </li>
+                    </ul>
+                </li>
+                <form action="http://www.seu-dominio.com.br" method="post">
+                    <input type=image src="img/RSS.png" width="35" height="35">
+                </form>
+            </ul>
+
+            <div id="img">
+
+                <div id="img">
+                    <img src="img/Struuts.png" width="300" height="400">
+                </div>
+            </div>
+            </select>
+
+        </nav>
+
+        <article>
+            <section class="content">
+                <div class="contato">
+                    <h1>Novo Evento</h1>
+                    <form class="form" method="POST" action="./email.php">
+                        <label class="field" for="formacao">Nome:</label>
+                        <input class="field" name="nome" placeholder="Nome">
+                        <label class="field" for="formacao">Descrição:</label>
+                        <input class="field" name="email" placeholder="Descrição">
+                        <label class="field" for="formacao">Instrutor:</label>
+                        <select class="field" name="select">
+                            <option>Selecione...</option>
+                            <option>Felipe Junior</option>
+                            <option>Aline Borges</option>
+                            <option>Lucas Silva</option>
+                        </select>
+                        <label class="field" for="formacao">Data de Início:</label>
+                        <input class="field" type="date" class="form-control">
+                        <label class="field" for="formacao">Data de Término:</label>
+                        <input class="field" type="date" class="form-control">
+                    </form>
+                    <button>Adicionar</button>
+
+
+                </div>
+            </section>
+        </article>
+
+    </section>
+
+    <footer>
+
+        <h4>Contato</h4>
+        <p>Mevc-cursos@contato.com</p>
+        <div class="col-6">
+            Brasil, AL, Maceió
+            <p class="m-0 text-center text-white">Copyright &copy; 2020</p>
+    </footer>
+
+</body>
+
+</html>
